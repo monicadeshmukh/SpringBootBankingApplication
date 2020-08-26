@@ -1,4 +1,4 @@
-# Spring Boot Project Template
+# Spring Boot With JSP Integration Project Template
 * **Objective** - The purpose of this repository is to create a standard template to clone from when creating new spring boot projects.
 
 ## How to use
