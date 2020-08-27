@@ -6,23 +6,10 @@
 
 
 
-## Instructions
+## Objective
 
-
-### Testing Application via Postman
-
-* Ensure that the `start-class` tag in your `pom.xml` encapsulates `com.github.perscholas.MyApplication`
-* Open a command line and navigate to the project's root directory and run this command:
-	* `mvn spring-boot:run`
-* Launch the [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) app and enter the URI `http://localhost:8080/` and hit Send.
-* If your application cannot run because something is occupying a port, use this command with the respective port number specified:
-    * **OSX and Linux**
-	    * ``kill -kill `lsof -t -i tcp:8080` ``
-    * **Windows**
-        * _For use in command line_:
-            * `for /f "tokens=5" %a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %a`
-        * _For use in bat-file_:
-            * `for /f "tokens=5" %%a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %%a` 
+#### Part 1 - ...
+* Ensure that all test cases in `src.test.com.github.perscholas` pass with 100% success rate. 
 
 
 
@@ -44,11 +31,11 @@
   * navigate to the `~/dev` directory by executing the following command:
     * `cd ~/dev`
   * clone the project by executing the following command:
-    * `git clone https://github.com/MYUSERNAME/NAMEOFPROJECT`
+    * `git clone https://github.com/${MYUSERNAME}/${NAMEOFPROJECT}`
 
 #### Part 4 - Check Build
 * Ensure that the tests run upon opening the project.
-    * You should see `Tests Failed: 99 of 99 tests`
+    * You should see `Tests Failed: ${no_tests} of ${no_tests} tests`
 
 
 
