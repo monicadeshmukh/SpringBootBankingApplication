@@ -1,0 +1,44 @@
+.bg-cover {
+  background-size: cover;
+  color: white;
+  background-position: center center;
+  background-image: url('../img/image3.jpg');
+  position: relative;
+  z-index: -2;
+}
+.jumbotron {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgba(103, 108, 110, 0.993);
+  background-size: cover;
+  height:90vh; /*viewportHeight*/
+  background-repeat: no-repeat;
+  text-shadow: 2px 2px #000;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(53, 18, 18);
+    font-size: 18px;
+    font-style: bold;
+    text-align: right;
+    color: white;
+    height: 10vh;
+}
+
+#activeMenu {
+    text-decoration-color: white;
+    text-decoration-style: solid;
+}
+
+#logo{
+    font-weight: bolder;
+    color: rgb(236, 228, 228);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-shadow: 4px 4px #000;
+}

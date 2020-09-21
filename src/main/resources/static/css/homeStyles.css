@@ -1,0 +1,62 @@
+.bg-cover {
+  background-size: cover;
+  color: white;
+  background-position: center center;
+ /* background-image: url('/img/image5.jpg');*/
+  background-image: "${image5Url}";
+  position: absolute;
+  z-index: -3;
+  border-radius: 0px;
+}
+.jumbotron {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgba(103, 108, 110, 0.993);
+  background-size: cover;
+  height:88vh; /*viewportHeight*/
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-repeat: no-repeat;
+  text-shadow: 2px 2px #000;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    height: 40px;
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 0px;
+    background-color: rgb(53, 18, 18);
+    font-size: 18px;
+    font-style: bold;
+    text-align: right;
+    color: white;
+    height: 10vh;
+    border-radius: 0%;
+}
+
+
+#activeMenu {
+    text-decoration-color: white;
+    text-decoration-style: solid;
+}
+
+#logo{
+    font-weight: bolder;
+    color: rgb(236, 228, 228);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-shadow: 4px 4px #000;
+}
+
+width100 {
+  width: 100%;
+}
+
+.mainContainer {
+  margin: 0px;
+  padding: 0px;
+}

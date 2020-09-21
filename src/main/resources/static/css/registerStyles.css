@@ -1,0 +1,151 @@
+.bg-cover {
+  background-size: cover;
+  color: white;
+  background-position: center center;
+  /*background-image: url('../img/login.jpg');*/
+  background-color: blue;
+  border-radius: 0px;
+}
+.jumbotron {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgba(103, 108, 110, 0.993);
+  background-size: cover;
+  height:88vh; /*viewportHeight*/
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    height: 40px;
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 0px;
+    background-color: rgb(53, 18, 18);
+    font-size: 18px;
+    font-style: bold;
+    text-align: right;
+    color: white;
+    height: 10vh;
+    border-radius: 0%;
+}
+
+
+#activeMenu {
+    text-decoration-color: white;
+    text-decoration-style: solid;
+}
+
+#logo{
+    font-weight: bolder;
+    color: rgb(236, 228, 228);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-shadow: 4px 4px #000;
+}
+
+width100 {
+  width: 100%;
+}
+
+/* Below line is used for online Google font */
+/*@import url(http://fonts.googleapis.com/css?family=Raleway);*/
+#signInLabel{
+background-color: #FEFFED;
+padding: 30px 35px;
+margin: -10px -50px;
+text-align:center;
+border-radius: 10px 10px 0 0;
+color: black;
+font-weight: bold;
+text-decoration-style:solid;
+font-weight:solid;
+}
+
+hr{
+margin: 10px -50px;
+border: 0;
+border-top: 1px solid #ccc;
+/*margin-bottom: 40px;*/
+}
+div.container{
+/*width: 900px;height: 610px; margin:35px auto;*/
+width:30%;
+height:50%;
+margin: auto;
+margin-left: 10%;
+margin-top: 5%;
+font-family: 'Times New Roman', Times, serif;
+}
+div.main{
+padding: 10px 50px 25px;
+border: 2px solid gray;
+border-radius: 10px;
+/*font-family: raleway;
+width: 300px;
+*/
+font-family: 'Times New Roman', Times, serif;
+float:left;
+/*margin-top:50px;*/
+}
+input[type=text],input[type=password]{
+width: 20%;
+height: 40px;
+padding: 5px;
+margin-bottom: 25px;
+margin-top: 5px;
+border: 2px solid #ccc;
+color: #4f4f4f;
+font-size: 16px;
+border-radius: 5px;
+}
+label{
+color:white;
+font-size: 14px;
+font-weight: bold;
+}
+center{
+font-size:32px;
+}
+.note{
+color:red;
+}
+.valid{
+color:green;
+}
+.back{
+text-decoration: none;
+border: 1px solid rgb(0, 143, 255);
+background-color: rgb(0, 214, 255);
+padding: 3px 20px;
+border-radius: 2px;
+color: black;
+}
+input[type=button]{
+font-size: 16px;
+background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+border: 1px solid #e5a900;
+color: #4E4D4B;
+font-weight: bold;
+cursor: pointer;
+width: 100%;
+border-radius: 5px;
+padding: 10px 0;
+outline:none;
+}
+input[type=button]:hover{
+background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+}
+
+/*.registration {
+    height: 70%;
+    width:30%;
+   margin: auto;
+   margin-right: 30%;
+    border-radius: 0px;
+}*/

@@ -1,0 +1,20 @@
+.bg-cover {
+  background-size: cover;
+  color: white;
+  background-position: center center;
+  background-image: url('./img/happyPeople4.jpg');
+  position: relative;
+  z-index: -2;
+}
+.jumbotron {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgba(245, 122, 122, 0.993);
+  background-size: cover;
+  height:100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  text-shadow: 2px 2px #000;
+}
