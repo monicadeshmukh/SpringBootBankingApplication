@@ -11,11 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -35,9 +33,30 @@ public class LoginRegisterController {
         return "loginRegister";   //the return statement string should match the name of the .jsp file
     }
 
-    @GetMapping("Account/")
-    public Customer show(String userName, String password) {
-        return customerRepository.findByUserNameAndPassword(userName, password).get();
+    //@GetMapping("Account/")
+    //public Customer show(String userName, String password) {
+    //public Customer show(@RequestParam Map<String, String> logInCredentials) {
+    /*public String show(@RequestParam Map<String, String> logInCredentials) {
+        List<Customer> customer = customerRepository.findByUserNameAndPassword(logInCredentials.get("userName"), logInCredentials.get("password"));
+        if (customer != null)
+            return "about";
+        else{
+            throw new ApplicationException("invalid username password. Please retry.");
+            //return "loginRegister";
+        }
+    }*/
+    @RequestMapping(value = "account", method = RequestMethod.GET)
+    public  String show(@RequestParam (value = "username") String username, @RequestParam (value = "password") String password){
+    //public  String show(@PathVariable String username, @PathVariable String password){
+        try{
+        List<Customer> customer = customerRepository.findByUserNameAndPassword(username, password);
+        if (customer != null)
+            return "about";
+        else
+            throw new ApplicationException("Invalid username and/or password. Please retry.");
+    }catch (Exception e){
+            throw new ApplicationException("Invalid username and/or password. Please retry.");
+        }
     }
 
 

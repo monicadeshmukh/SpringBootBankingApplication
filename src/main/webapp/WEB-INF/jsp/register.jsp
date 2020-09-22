@@ -106,6 +106,6 @@
   2020 <u> Monica Deshmukh's Web Dev. </u> © All rights reserved.</a>
 </footer>
 </div>
-<script type="text/javascript" src="./js/login.js"></script>
+<!--<script type="text/javascript" src="./js/login.js"></script>-->
 </body>
 </html>

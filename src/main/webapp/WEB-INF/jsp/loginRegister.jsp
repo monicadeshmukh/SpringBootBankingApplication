@@ -9,7 +9,22 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
+  <script>
+    function validateInput(){
+      if (document.myform.userName.value == ""){
+        alert ( "Please enter Login Name." );
+        document.myform.userName.focus();
+        return false;
+      }
+      if (document.myform.password.value == ""){
+        alert ( "Please enter password." );
+        document.myform.password.focus();
+        return false;
+      }
+      alert ( "Welcome User" );
+      return true;
+    }
+  </script>
 </head>
 <body>
 <div class="container" style="width: 100%; margin: 0px; padding: 0px;">
@@ -51,13 +66,13 @@
           <div class="container">
             <div class="main"   style="position: absolute;">
              <h2 id="signInLabel">Sign In </h2><br>
-              <form id="form_id" action = "/account/" method="get" name="myform">
+              <form id="form_id" action = "/account" method="get" name="myform">
               <label>User Name :</label>
               <input type="text" name="username" id="username"/><br>
               <label>Password :</label>
               <input type="password" name="password" id="password"/><br>
              <!-- <input type="button" value="Login" id="submit" onclick="validate()"/>-->
-             <input type = "button" value="Login" id = "submit"/>
+             <input type = "submit" value="Login" id = "submit" onclick="alert('submit button clicked);"/>
               </form>
             </div>
           </div>
@@ -88,6 +103,6 @@
   2020 <u> Monica Deshmukh's Web Dev. </u> © All rights reserved.</a>
 </footer>
 </div>
-<script type="text/javascript" src="./js/login.js"></script>
+<!--<script type="text/javascript" src="./js/login.js"></script>-->
 </body>
 </html>
