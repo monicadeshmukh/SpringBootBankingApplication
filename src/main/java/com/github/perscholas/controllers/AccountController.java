@@ -1,5 +1,3 @@
-
-//package com.github.perscholas;
 package com.github.perscholas.controllers;
 
 
@@ -10,10 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
-public class welcomeController {
-    @GetMapping("welcome/")
+public class AccountController {
+    @GetMapping("account/")
     String getView(Model model) {
-        model.addAttribute("message", "Hello there, This message has been injected from the controller method");
-        return "welcome";   //the return statement string should match the name of the .jsp file
+        //TODO
+        //populate account id and account balance fields and return view.
+
+        return "account";   //the return statement string should match the name of the .jsp file
     }
 }

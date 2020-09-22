@@ -27,6 +27,7 @@
   </script>
 </head>
 <body>
+<%@ page errorPage="error.jsp" %>
 <div class="container" style="width: 100%; margin: 0px; padding: 0px;">
 <nav class="navbar navbar-inverse ">
     <div class="container-fluid">
@@ -100,7 +101,7 @@
 
 <!--<footer><iframe src="footer.html" id = "footerFrame"></iframe></footer> container-fluid bg-4 position: absolute; bottom:0; margin:0; -->
 <footer class="footer mt-auto px-3 text-center" style="position: absolute; width:100%; bottom:0; background-color: #3D3D3D; color: white; text-align: center">
-  2020 <u> Monica Deshmukh's Web Dev. </u> © All rights reserved.</a>
+  2020 <u> Monica Deshmukh Web Dev. </u> © All rights reserved.</a>
 </footer>
 </div>
 <!--<script type="text/javascript" src="./js/login.js"></script>-->

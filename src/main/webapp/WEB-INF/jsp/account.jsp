@@ -50,39 +50,17 @@
     <div id = "data" class = "row jumbotron bg-cover width100">
           <div class="container">
            <div class="main"   style="position: absolute;">
-             <h2 id="signInLabel">Register </h2><br>
+             <h2 id="signInLabel">Account Details </h2><br>
               <!--<form id="form_id" action="/Customer/" name="registerCustomerForm" method="post">-->
               <form id="form_id" action="/loginRegister/" name="registerCustomerForm" method="post">
 
-              <label>User Name :</label>
-              <input type="text" name="username" id="username"/>&nbsp&nbsp
-              <label>Password :</label>
-              <input type="password" name="password" id="password"/><br>
+                <label>Account Number :</label>
+                <input type="text" name="accountNumber" value =${accountNumber} id="accountNumber" readonly="true" />
+                <label>Balance :</label>
+                <input type="text" name="balance" id="balance" value=${balance} readonly="true" /><br>
 
-              <label>First Name :</label>
-              <input type="text" name="firstname" id="firstname"/>&nbsp&nbsp
-              <label>Last Name :</label>
-              <input type="text" name="lastname" id="lastname"/><br>
-
-              <label>Address1 :</label>
-              <input type="text" name="address1" id="address1"/>&nbsp&nbsp
-              <label>Address2 :</label>
-              <input type="text" name="address2" id="address2"/><br>
-
-              <label>City :</label>
-              <input type="text" name="city" id="city"/>&nbsp&nbsp
-              <label>State :</label>
-              <input type="text" name="state" id="state"/>&nbsp&nbsp
-              <label>Zip Code :</label>
-              <input type="text" name="zipcode" id="zipcode"/><br>
-
-              <label>Email :</label>
-              <input type="text" name="email" id="email"/>&nbsp&nbsp
-              <label>Phone Number :</label>
-              <input type="text" name="phone" id="phone"/><br>
-
-             <!-- <input type="button" value="Login" id="submit" onclick="validate()"/>-->
-             <input type = "submit" value="Register" id = "submit" />
+                <input type = "button" value="View Transactions" id = "viewTransactions" onclick="window.open('transactions.jsp');" style="width: 40%" />
+                <input type = "button" value="Bill Pay" id = "billPay" style="width: 40%"/>
               </form>
             </div>
         </div>
@@ -103,9 +81,9 @@
 
 <!--<footer><iframe src="footer.html" id = "footerFrame"></iframe></footer> container-fluid bg-4 position: absolute; bottom:0; margin:0; -->
 <footer class="footer mt-auto px-3 text-center" style="position: absolute; width:100%; bottom:0; background-color: #3D3D3D; color: white; text-align: center">
-  2020 <u> Monica Deshmukh's Web Dev. </u> © All rights reserved.</a>
+  2020 <u> Monica Deshmukh Web Dev. </u> © All rights reserved.</a>
 </footer>
 </div>
-<script type="text/javascript" src="./js/login.js"></script>
+<!--<script type="text/javascript" src="./js/login.js"></script>-->
 </body>
 </html>

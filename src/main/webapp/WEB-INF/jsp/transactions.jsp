@@ -3,9 +3,10 @@
 <head>
   <title>Neighborhood Bank</title>
   <meta charset="utf-8">
+  <meta http-equiv= "Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="/css/aboutStyles.css">
+   <link rel="stylesheet" href="/css/registerStyles.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -36,8 +37,8 @@
                     <li><a href="snacks.html#Poha">Bill Pay</a></li>
                   </ul>
                 </li>
-              <li class="active activeMenu"><a href="#">About</a></li>
-              <li><a href="/loginRegister/">LogIn</a></li>
+              <li><a href="/about/">About</a></li>
+              <li class="active activeMenu"><a href="/loginRegister/">LogIn</a></li>
               <li><a href="/contact/">Contact</a></li>
             </ul>
       </div>
@@ -46,19 +47,37 @@
 </nav>
 
   <!--<div id = "data" class = "col-12 jumbotron bg-cover text-center" style="text-align: center; display: flex; flex-direction: column; flex-wrap: wrap; background-color: rgba(245, 122, 122, 0.993);  background-size: cover; height:100%; background-repeat: no-repeat;">-->
-    <div id = "data" class = "col-12 jumbotron bg-cover width100 " style="background-color: rgb(247, 197, 131); background-image: url('#');">
-      <div class="container" style=" margin: auto; border-radius: 0px;">
-        <h2>NEIGHBORHOOD BANK</h2>
-        <h2>Online Banking Application</h1>
-        <h2>Educational Website built to learn Full Stack Web Development.</h2><br>
-        <h4>Register for online banking.</h4>
-        <h4>View your account details.</h4>
-        <h4>Make bill payments to registered payees.</h4><br>
-        <h3>Tech Stack and Tools used:</h3>
-        <h4>Bootstrp 4, HTML5, CSS3, Java Script, JSP, MariaDB MySQL, HeidiSQL, Spring BOOT, Java 8, IntelliJ Maven, GitHub</h4>
-      </div>
+    <div id = "data" class = "row jumbotron bg-cover width100">
+          <div class="container">
+           <div class="main"   style="position: absolute;">
+             <h2 id="signInLabel">Transaction Details </h2><br>
+              <!--<form id="form_id" action="/Customer/" name="registerCustomerForm" method="post">-->
+              <form id="form_id" action="/transactions/" name="transactionsForm" method="get">
 
-  </div>
+                <label>Account Number :</label>
+                <input type="text" name="accountNumber" id="accountNumber"/>
+                <label>Balance :</label>
+                <input type="balance" name="balance" id="balance"/>
+
+                <input type = "button" value="Bill Pay" id = "billPay" /><br>
+
+                <ol>
+                  <li>Transaction Date</li>
+                  <li>Description</li>
+                  <li>Deposit Amount</li>
+                  <li>Withdrawal Amount</li>
+                  <li>Received From</li>
+                  <li>Paid To/li>
+
+                </ol>
+
+              </form>
+            </div>
+        </div>
+    
+        </div>
+
+    </div>
 
 
 
@@ -74,6 +93,7 @@
 <footer class="footer mt-auto px-3 text-center" style="position: absolute; width:100%; bottom:0; background-color: #3D3D3D; color: white; text-align: center">
   2020 <u> Monica Deshmukh Web Dev. </u> © All rights reserved.</a>
 </footer>
-<!--<footer style="background-color: #3D3D3D; color: white; text-align: center"> 2019 <u> Monica's Web Dev. </u> All rights reserved.</footer>-->
+</div>
+<!--<script type="text/javascript" src="./js/login.js"></script>-->
 </body>
 </html>

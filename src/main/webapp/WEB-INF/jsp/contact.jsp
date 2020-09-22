@@ -196,7 +196,7 @@
                 </div>
            </div>
             <div class="container-fluid row bg-4 text-center" style="width:100%; background-color: #3D3D3D; color: white; text-align: center">
-                2020 <u> Monica Deshmukh's Web Dev. </u> © All rights reserved.</a>
+                2020 <u> Monica Deshmukh Web Dev. </u> © All rights reserved.</a>
             </div>
         </div>
     </footer>

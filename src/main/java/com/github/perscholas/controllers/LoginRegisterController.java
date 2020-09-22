@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/")
@@ -46,16 +47,20 @@ public class LoginRegisterController {
         }
     }*/
     @RequestMapping(value = "account", method = RequestMethod.GET)
-    public  String show(@RequestParam (value = "username") String username, @RequestParam (value = "password") String password){
+    public  String show(Model model, @RequestParam (value = "username") String username, @RequestParam (value = "password") String password){
     //public  String show(@PathVariable String username, @PathVariable String password){
         try{
-        List<Customer> customer = customerRepository.findByUserNameAndPassword(username, password);
-        if (customer != null)
-            return "about";
-        else
-            throw new ApplicationException("Invalid username and/or password. Please retry.");
-    }catch (Exception e){
-            throw new ApplicationException("Invalid username and/or password. Please retry.");
+            List<Customer> customer = customerRepository.findByUserNameAndPassword(username, password);
+            Optional<Accounts> account = accountsRepository.findById(customer.get(0).getAccountNumber());
+            if (!customer.isEmpty()) {
+                model.addAttribute("accountNumber", account.get().getAccountNumber());
+                model.addAttribute("balance", account.get().getBalance());
+                return "account";
+            }
+            else
+                throw new ApplicationException("Invalid username and/or password. Please retry.");
+        }catch (Exception e){
+                throw new ApplicationException("Invalid username and/or password. Please retry.");
         }
     }
 
