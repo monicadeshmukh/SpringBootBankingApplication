@@ -90,10 +90,61 @@ public class LoginRegisterController {
             account.setCustomer(newCustomer);
             accountsRepository.save(account);
             customer.setAccount(account);
+
+            //create dummy payee accounts
+            createPayees();
+
             return "loginRegister";
         }catch(Exception e){
             throw new ApplicationException("Error occured.");
         }
 
+    }
+
+    //create dummy customers as payees for demonstration purpose
+    void createPayees(){
+        //create dummy electric company
+        Customer electricCompany = new Customer();
+        electricCompany.setUsername("electriccompany");
+        electricCompany.setPassword("electriccompany");
+        electricCompany.setFirstName("Dominion Energy");
+        electricCompany.setLastName("Dominion");
+        electricCompany.setPhone("18001112222");
+        electricCompany.setEmail("dominionenergy@gmail.com");
+        electricCompany.setAddress1("111 dominion lane");
+        electricCompany.setCity("Richmond");
+        electricCompany.setState("VA");
+        electricCompany.setZipcode(23055);
+        electricCompany.setAccount(null);
+        Customer electricCompanyPayee = customerRepository.save(electricCompany);
+
+        Accounts electricCompanyAccount = new Accounts();
+        electricCompanyAccount.setBalance(1000D);
+        electricCompanyAccount.setCustomer(electricCompanyPayee);
+        accountsRepository.save(electricCompanyAccount);
+
+        electricCompanyPayee.setAccount(electricCompanyAccount);
+
+        //create dummy water company
+        Customer waterCompany = new Customer();
+        waterCompany.setUsername("watercompany");
+        waterCompany.setPassword("watercompany");
+        waterCompany.setFirstName("Richmond Water Works");
+        waterCompany.setLastName("Richmond Water Works");
+        waterCompany.setPhone("18003334444");
+        waterCompany.setEmail("richmondwaterworks@gmail.com");
+        waterCompany.setAddress1("111 water lane");
+        waterCompany.setCity("Richmond");
+        waterCompany.setState("VA");
+        waterCompany.setZipcode(23055);
+        waterCompany.setAccount(null);
+        Customer waterCompanyPayee = customerRepository.save(waterCompany);
+
+        Accounts waterCompanyAccount = new Accounts();
+        waterCompanyAccount.setBalance(1000D);
+        waterCompanyAccount.setCustomer(waterCompanyPayee);
+        accountsRepository.save(waterCompanyAccount);
+
+        waterCompanyPayee.setAccount(waterCompanyAccount);
     }
 }

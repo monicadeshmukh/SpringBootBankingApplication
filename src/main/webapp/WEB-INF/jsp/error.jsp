@@ -19,7 +19,7 @@
         <%@ page isErrorPage="true" %>
         Oops! Something went wrong.
         We are sorry for the inconvenience!<br/>
-        The following exception occured : <%= exception %>
+        The following error occured : <%= exception %>
     </div>
 	<script type="text/javascript"
 		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>

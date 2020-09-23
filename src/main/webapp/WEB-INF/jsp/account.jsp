@@ -6,7 +6,7 @@
   <meta http-equiv= "Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="/css/registerStyles.css">
+  <link rel="stylesheet" href="/css/registerStyles.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -52,16 +52,16 @@
            <div class="main"   style="position: absolute;">
              <h2 id="signInLabel">Account Details </h2><br>
               <!--<form id="form_id" action="/Customer/" name="registerCustomerForm" method="post">-->
-              <form id="form_id" action="/loginRegister/" name="registerCustomerForm" method="post">
+              <form id="form_id" action="/transactions/" name="registerCustomerForm" method="post">
 
                 <label>Account Number :</label>
                 <input type="text" name="accountNumber" value =${accountNumber} id="accountNumber" readonly="true" />
                 <label>Balance :</label>
                 <input type="text" name="balance" id="balance" value=${balance} readonly="true" /><br>
 
-                <input type = "button" value="View Transactions" id = "viewTransactions" onclick="window.open('transactions.jsp');" style="width: 40%" />
-                <input type = "button" value="Bill Pay" id = "billPay" style="width: 40%"/>
-              </form>
+                <input type="submit" value = "transactions" name="transactions" class="btn btn-primary btn-lg" style="position: absolute; width=30%">View Transactions</button>
+                <!--<a href="/billpay/${accountNumber}/${balance}" class="btn btn-primary btn-lg" style="position: absolute;width=30%   ">Bill Pay</a>-->
+             </form>
             </div>
         </div>
     

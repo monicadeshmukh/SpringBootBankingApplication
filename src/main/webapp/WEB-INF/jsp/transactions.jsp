@@ -3,16 +3,16 @@
 <head>
   <title>Neighborhood Bank</title>
   <meta charset="utf-8">
-  <meta http-equiv= "Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="/css/registerStyles.css">
+  <link rel="stylesheet" href="/css/loginRegisterStyles.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 </head>
 <body>
+<!--<%@ page errorPage="error.jsp" %>-->
 <div class="container" style="width: 100%; margin: 0px; padding: 0px;">
 <nav class="navbar navbar-inverse ">
     <div class="container-fluid">
@@ -47,35 +47,42 @@
 </nav>
 
   <!--<div id = "data" class = "col-12 jumbotron bg-cover text-center" style="text-align: center; display: flex; flex-direction: column; flex-wrap: wrap; background-color: rgba(245, 122, 122, 0.993);  background-size: cover; height:100%; background-repeat: no-repeat;">-->
-    <div id = "data" class = "row jumbotron bg-cover width100">
+    <div id = "data" class = "row jumbotron bg-cover width100" style="background-color: blue;">
+        <div class = "col-9 col-sm-12">
           <div class="container">
-           <div class="main"   style="position: absolute;">
-             <h2 id="signInLabel">Transaction Details </h2><br>
-              <!--<form id="form_id" action="/Customer/" name="registerCustomerForm" method="post">-->
-              <form id="form_id" action="/transactions/" name="transactionsForm" method="get">
+            <div class="main"   style="position: absolute;">
+             <h2 id="signInLabel">Transactions </h2><br>
+             <!-- <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Transaction Date</th>
+                    <th>Description</th>
+                    <th>Deposit / Credit</th>
+                    <th>Withdrawal / Debit</th>
+                    <th>Transacting account number</th>
+                    <th>Transacting account Name</th>
+                  </tr>
+                </thead>
 
-                <label>Account Number :</label>
-                <input type="text" name="accountNumber" id="accountNumber"/>
-                <label>Balance :</label>
-                <input type="balance" name="balance" id="balance"/>
-
-                <input type = "button" value="Bill Pay" id = "billPay" /><br>
-
-                <ol>
-                  <li>Transaction Date</li>
-                  <li>Description</li>
-                  <li>Deposit Amount</li>
-                  <li>Withdrawal Amount</li>
-                  <li>Received From</li>
-                  <li>Paid To/li>
-
-                </ol>
-
-              </form>
+                <tbody>
+                  <c:forEach var="transactions" items="${transaction}">
+                    <tr>
+                      <td>${transactions.transactionDate}</td>
+                      <td>${transactions.description}</td>
+                      <td>${transactions.deposit}</td>
+                      <td>${transactions.withdrawal}</td>
+                      <td>${transactions.customerAccount}</td>
+                      <td>${transactions.customerAccount}</td>
+                    </tr>
+                  </c:forEach>
+                </tbody>
+                
+              </table>-->
             </div>
+          </div>
         </div>
-    
-        </div>
+
+
 
     </div>
 
