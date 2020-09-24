@@ -82,7 +82,7 @@
               <input type="text" name="phone" id="phone"/><br>
 
              <!-- <input type="button" value="Login" id="submit" onclick="validate()"/>-->
-             <input type = "submit" value="Register" id = "submit" />
+             <input type = "submit" value="Register" id = "submit" class="btn btn-primary btn-lg" style=" width=30%"/>
               </form>
             </div>
         </div>

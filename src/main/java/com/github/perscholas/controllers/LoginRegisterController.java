@@ -34,18 +34,6 @@ public class LoginRegisterController {
         return "loginRegister";   //the return statement string should match the name of the .jsp file
     }
 
-    //@GetMapping("Account/")
-    //public Customer show(String userName, String password) {
-    //public Customer show(@RequestParam Map<String, String> logInCredentials) {
-    /*public String show(@RequestParam Map<String, String> logInCredentials) {
-        List<Customer> customer = customerRepository.findByUserNameAndPassword(logInCredentials.get("userName"), logInCredentials.get("password"));
-        if (customer != null)
-            return "about";
-        else{
-            throw new ApplicationException("invalid username password. Please retry.");
-            //return "loginRegister";
-        }
-    }*/
     @RequestMapping(value = "account", method = RequestMethod.GET)
     public  String show(Model model, @RequestParam (value = "username") String username, @RequestParam (value = "password") String password){
     //public  String show(@PathVariable String username, @PathVariable String password){

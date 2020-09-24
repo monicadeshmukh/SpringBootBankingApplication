@@ -27,7 +27,7 @@
   </script>
 </head>
 <body>
-<%@ page errorPage="error.jsp" %>
+<!--<%@ page errorPage="error.jsp" %>-->
 <div class="container" style="width: 100%; margin: 0px; padding: 0px;">
 <nav class="navbar navbar-inverse ">
     <div class="container-fluid">
@@ -73,7 +73,7 @@
               <label>Password :</label>
               <input type="password" name="password" id="password"/><br>
              <!-- <input type="button" value="Login" id="submit" onclick="validate()"/>-->
-             <input type = "submit" value="Login" id = "submit" onclick="alert('submit button clicked);"/>
+             <input type = "submit" value="Login" id = "submit" class="btn btn-primary btn-lg" style=" width=30%" onclick="alert('submit button clicked);"/>
               </form>
             </div>
           </div>

@@ -16,8 +16,11 @@ public interface CustomerRepository extends CrudRepository<Customer, Long> {
     @Query("FROM Customer WHERE userName = ?1 AND password = ?2")
     List<Customer> findByUserNameAndPassword(String userName, String password);
 
-    @Query("From Customer WHERE accountNumber = ?1")
+    @Query("From Customer WHERE account_account_number = ?1")
     List<Customer> findByAccountNumber(Long accountNumber);
+
+    @Query("From Customer WHERE account_account_number != ?1")
+    List<Customer> findByNotAccountNumber(Long accountNumber);
 }
 
 

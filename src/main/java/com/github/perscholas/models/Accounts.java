@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Entity
 @Table(name = "Accounts")
-public class Accounts implements Serializable {
+public class Accounts {
 
     @Id@GeneratedValue(strategy = GenerationType.AUTO)
     private Long accountNumber;
@@ -24,7 +24,8 @@ public class Accounts implements Serializable {
     @Column(name = "balance", nullable = false)
     private Double balance;
 
-    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
+    //@JoinColumn(name="accountNumber")
     //@ElementCollection
     private Set<Transactions> transactions = null;
 

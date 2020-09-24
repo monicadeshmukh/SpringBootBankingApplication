@@ -32,9 +32,9 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="snacks.html">Online Account <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="snacks.html#BatataWada">Enroll </a></li>
-                    <li><a href="snacks.html#MeduWada">View Account</a></li>
-                    <li><a href="snacks.html#Poha">Bill Pay</a></li>
+                    <li><a href="/register/">Enroll </a></li>
+                    <li><a href="/account/">View Account</a></li>
+                    <li><a href="/billpay/">Bill Pay</a></li>
                   </ul>
                 </li>
               <li><a href="/about/">About</a></li>
@@ -51,17 +51,18 @@
           <div class="container">
            <div class="main"   style="position: absolute;">
              <h2 id="signInLabel">Account Details </h2><br>
-              <!--<form id="form_id" action="/Customer/" name="registerCustomerForm" method="post">-->
-              <form id="form_id" action="/transactions/" name="registerCustomerForm" method="post">
-
+             <form id="form_id" action="/transactions/" name="registerCustomerForm" method="post">
+            <!-- <form action="/billpay/" name="billpayForm" method="post">-->
                 <label>Account Number :</label>
                 <input type="text" name="accountNumber" value =${accountNumber} id="accountNumber" readonly="true" />
                 <label>Balance :</label>
                 <input type="text" name="balance" id="balance" value=${balance} readonly="true" /><br>
 
-                <input type="submit" value = "transactions" name="transactions" class="btn btn-primary btn-lg" style="position: absolute; width=30%">View Transactions</button>
-                <!--<a href="/billpay/${accountNumber}/${balance}" class="btn btn-primary btn-lg" style="position: absolute;width=30%   ">Bill Pay</a>-->
-             </form>
+                <input type="submit" value = "View Transactions" name="transactions" class="btn btn-primary btn-lg" style=" width=30%"></button>
+                </form>
+                <!-- <input type="submit" value="Bill Pay" class="btn btn-primary btn-lg" style=" width=30%"</button>
+                </form>-->
+
             </div>
         </div>
     

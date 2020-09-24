@@ -32,9 +32,9 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="snacks.html">Online Account <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="snacks.html#BatataWada">Enroll </a></li>
-                    <li><a href="snacks.html#MeduWada">View Account</a></li>
-                    <li><a href="snacks.html#Poha">Bill Pay</a></li>
+                    <li><a href="/register/">Enroll </a></li>
+                    <li><a href="/account/">View Account</a></li>
+                    <li><a href="/billpay/">Bill Pay</a></li>
                   </ul>
                 </li>
               <li><a href="/about/">About</a></li>
@@ -52,7 +52,7 @@
           <div class="container">
             <div class="main"   style="position: absolute;">
              <h2 id="signInLabel">Transactions </h2><br>
-             <!-- <table class="table table-bordered">
+             <table class="table table-bordered">
                 <thead>
                   <tr>
                     <th>Transaction Date</th>
@@ -60,24 +60,22 @@
                     <th>Deposit / Credit</th>
                     <th>Withdrawal / Debit</th>
                     <th>Transacting account number</th>
-                    <th>Transacting account Name</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  <c:forEach var="transactions" items="${transaction}">
+                  <c:forEach var="transactions" items="${transactions}">
                     <tr>
-                      <td>${transactions.transactionDate}</td>
-                      <td>${transactions.description}</td>
-                      <td>${transactions.deposit}</td>
-                      <td>${transactions.withdrawal}</td>
-                      <td>${transactions.customerAccount}</td>
-                      <td>${transactions.customerAccount}</td>
+                      <td>  <c:out value = ${transactions.transactionDate}/></td>
+                      <td><c:out value = ${transactions.description}/></td>
+                      <td><c:out value = ${transactions.deposit}/></td>
+                      <td><c:out value = ${transactions.withdrawal}/></td>
+                      <td><c:out value = ${transactions.payeeAccount}/></td>
                     </tr>
                   </c:forEach>
                 </tbody>
                 
-              </table>-->
+              </table>
             </div>
           </div>
         </div>

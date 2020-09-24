@@ -12,6 +12,6 @@ import java.util.List;
 @Repository
 public interface TransactionsRepository extends CrudRepository<Transactions, Long> {
 
-    @Query("FROM Transactions WHERE account_number = ?1")
-    List<Transactions> findByAccount_number(Long accountNumber);
+    @Query("FROM Transactions WHERE account_account_number = ?1")
+    List<Transactions> findByAccountNumber(Long accountNumber);
 }

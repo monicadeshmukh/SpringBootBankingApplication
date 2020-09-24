@@ -11,7 +11,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "Customer")
-public class Customer implements Serializable {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long customerId;
@@ -19,8 +19,8 @@ public class Customer implements Serializable {
     //map it to the accountnumber in accounts table.
     //X define bidirectional  OneToOne relationship between customer and account for the sake of this case study
     //define Unidirectional OneToOne relationship
-    @OneToOne(mappedBy = "customer", cascade = CascadeType.ALL)
-    //@OneToOne
+    //@OneToOne(mappedBy = "customer", cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     private Accounts account = null;
 
    @Column(name = "firstName", nullable = false)
