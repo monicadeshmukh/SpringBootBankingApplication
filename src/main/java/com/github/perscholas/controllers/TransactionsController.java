@@ -48,10 +48,6 @@ public class TransactionsController {
             transactionsRepository.findByAccountNumber(accountNumber).forEach(t -> transactions.add(t));
             if (!transactions.isEmpty()){
                 System.out.println("transactions11: " +transactions.get(0).getTransactionDate());
-                for (Transactions transaction: transactions) {
-                    transaction.setTransactionDate((LocalDateTime) transaction.getTransactionDate());
-                }
-                System.out.println("transactions22: " +transactions.get(0).getTransactionDate());
                 model.addAttribute("transactions",transactions);
                 return "transactions";
             }
