@@ -44,10 +44,11 @@ public class TransactionsController {
                                     @RequestParam(value = "accountNumber") Long accountNumber,
                                     @RequestParam (value = "balance") Double balance){
         try{
+            populateTransactionDataForTesting(accountNumber, balance);
             List<Transactions> transactions = new ArrayList<Transactions>();
             transactionsRepository.findByAccountNumber(accountNumber).forEach(t -> transactions.add(t));
             if (!transactions.isEmpty()){
-                System.out.println("transactions11: " +transactions.get(0).getTransactionDate());
+                System.out.println("transactions11: " +transactions.get(0).getTransactionId());
                 model.addAttribute("transactions",transactions);
                 return "transactions";
             }
@@ -58,6 +59,25 @@ public class TransactionsController {
             throw new ApplicationException("Error getting transactions for this account. We are sorry for the inconvenience.\n" +
                     "Following exception occured.\n" + e);
         }
+    }
+
+    void populateTransactionDataForTesting(Long accountNumber, Double balance){
+        //create a new transaction
+        Transactions transaction = new Transactions();
+        Accounts account = accountsRepository.findById(accountNumber).get();
+        transaction.setAccount(account);
+        Double withdrawal = 100D;
+        transaction.setWithdrawal(withdrawal);
+        Long payeeAccount = customerRepository.findByFirstName("Dominion Energy").get(0).getAccountNumber();
+        transaction.setPayeeAccount(payeeAccount);
+        transaction.setDescription("Paid $100 to Dominion Energy");
+
+        //save transaction
+        transactionsRepository.save(transaction);
+
+        //update the account balance
+        account.setBalance(account.getBalance()-100);
+        accountsRepository.save(account);
     }
   /* public  String showTransactions(Model model,
                                     @RequestParam(value = "accountNumber") Long accountNumber,

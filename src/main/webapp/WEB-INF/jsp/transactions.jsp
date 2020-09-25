@@ -51,7 +51,7 @@
         <div class = "col-9 col-sm-12">
           <div class="container">
             <div class="main"   style="position: absolute;">
-             <h2 id="signInLabel">Transactions ${transactions}</h2><br>
+             <h2 id="signInLabel">Transactions <!--${transactions.get(0).transactionDate}--></h2><br>
              <table class="table table-bordered">
                 <thead>
                   <tr>
@@ -64,15 +64,15 @@
                 </thead>
 
                 <tbody>
-                  <c:forEach var="transaction" items="${transactions}">
+                 <!--<c:forEach items="${transactions}" var="transaction">-->
                     <tr>
-                      <td>  <c:out value = ${transaction.transactionDate}/></td>
-                      <td><c:out value = ${transaction.description}/></td>
-                      <td><c:out value = ${transaction.deposit}/></td>
-                      <td><c:out value = ${transaction.withdrawal}/></td>
-                      <!--<td><c:out value = ${transaction.payeeAccount}/></td>-->
+                      <td>  ${transactions.get(0).transactionDate} </td>
+                      <td> ${transactions.get(0).description} </td>
+                      <td> ${transactions.get(0).deposit} </td>
+                      <td> ${transactions.get(0).withdrawal} </td>
+                      <td> ${transactions.get(0).payeeAccount} </td>
                     </tr>
-                  </c:forEach>
+                 <!--</c:forEach>-->
                 </tbody>
                 
               </table>

@@ -21,6 +21,9 @@ public interface CustomerRepository extends CrudRepository<Customer, Long> {
 
     @Query("From Customer WHERE account_account_number != ?1")
     List<Customer> findByNotAccountNumber(Long accountNumber);
+
+    @Query("From Customer WHERE first_name = ?1")
+    List<Customer> findByFirstName(String firstname);
 }
 
 

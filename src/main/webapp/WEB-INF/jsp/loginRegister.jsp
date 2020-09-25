@@ -47,9 +47,9 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="snacks.html">Online Account <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="snacks.html#BatataWada">Enroll </a></li>
-                    <li><a href="snacks.html#MeduWada">View Account</a></li>
-                    <li><a href="snacks.html#Poha">Bill Pay</a></li>
+                    <li><a href="/register/">Enroll </a></li>
+                    <li><a href="/account/">View Account</a></li>
+                    <li><a href="/billpay/">Bill Pay</a></li>
                   </ul>
                 </li>
               <li><a href="/about/">About</a></li>
@@ -82,7 +82,7 @@
           <div class="container " style="position: absolute; ">
             <h3 style="text-decoration-style:solid; font-weight:solid;">New to Online Banking? </h3><br>
             <a href="/register/" class="btn btn-success btn-lg"  >REGISTER FOR ONLINE BANKING</a><br>
-            <h4>Conveniently register for online banking <br> using your bank account number.</h4>
+            <h4>Conveniently register for online banking<br>using your details.</h4>
           </div>
         </div>
 

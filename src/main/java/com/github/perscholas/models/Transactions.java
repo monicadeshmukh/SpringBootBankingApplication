@@ -38,7 +38,30 @@ public class Transactions {
     private Long payeeAccount;
 
 
-    //getters and setters
+    //constructors, getters and setters
+
+    public Transactions() {
+        this.transactionDate = LocalDateTime.now();
+        this.account = null;
+        this.deposit = 0D;
+        this.withdrawal = 0D;
+        this.description = "";
+        this.payeeAccount = 0L;
+    }
+    public Transactions(Long transactionId,
+                        Accounts account,
+                        LocalDateTime transactionDate,
+                        Double deposit, Double withdrawal,
+                        String description,
+                        Long payeeAccount) {
+        this.transactionId = transactionId;
+        this.account = account;
+        this.transactionDate = transactionDate;
+        this.deposit = deposit;
+        this.withdrawal = withdrawal;
+        this.description = description;
+        this.payeeAccount = payeeAccount;
+    }
 
     public Long getTransactionId() {
         return transactionId;

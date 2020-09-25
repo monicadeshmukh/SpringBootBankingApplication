@@ -40,9 +40,9 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Online Account <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="snacks.html#BatataWada">Enroll </a></li>
-                    <li><a href="snacks.html#MeduWada">View Account</a></li>
-                    <li><a href="snacks.html#Poha">Bill Pay</a></li>
+                    <li><a href="/register/">Enroll </a></li>
+                    <li><a href="/account/">View Account</a></li>
+                    <li><a href="/billpay/">Bill Pay</a></li>
                   </ul>
                 </li>
               <li><a href="/about/">About</a></li>

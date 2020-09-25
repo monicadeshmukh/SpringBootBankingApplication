@@ -36,9 +36,9 @@
                       <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="snacks.html">Online Account <span class="caret"></span></a>
                           <ul class="dropdown-menu">
-                            <li><a href="snacks.html#BatataWada">Enroll </a></li>
-                            <li><a href="snacks.html#MeduWada">View Account</a></li>
-                            <li><a href="snacks.html#Poha">Bill Pay</a></li>
+                             <li><a href="/register/">Enroll </a></li>
+                             <li><a href="/account/">View Account</a></li>
+                             <li><a href="/billpay/">Bill Pay</a></li>
                           </ul>
                         </li>
                       <li><a href="/about/">About</a></li>
@@ -77,8 +77,8 @@
                 <div class="col-12 col-sm-4 offset-sm-1 ml-3">
                     <h5>Our Address</h5>
                         <address style="font-size: 100%">
-                        Suite 121, Clear Water Ave<br>
-                        Blue Skies City, VA 54333<br>
+                        121, Clear Water Bay Road<br>
+                        Clear Water Bay, NC<br>
                         <br>
 
                     </address>
@@ -87,8 +87,8 @@
                     <h5>Map of our Location</h5>
                 </div>
                 <div class="col-12 col-sm-11 offset-sm-1">
-                    <button type="button" class="btn btn-primary btn-lg mr-3" href="tel:+7573341815">Call Us</button>
-                    <button type="button" class="btn btn-secondary btn-lg" href="mailto:neighborhoodbank@gmail.com">Email Us</button>
+                    <a class="btn btn-primary btn-lg mr-3" href="tel:+7573341815">Call Us</a>
+                    <a class="btn btn-secondary btn-lg" href="mailto:neighborhoodbank@gmail.com">Email Us</a>
                 </div>
             </div>
 
@@ -166,22 +166,22 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="loginRegister.html">logIn</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/index/">Home</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/loginRegister/">logIn</a></li>
+                        <li><a href="/contact/">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
 		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
+		              Clear Water Bay, NC<br>
+		              <br>
                       <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
                       <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
                       <i class="fa fa-envelope fa-lg"></i>:
-                      <a href="mailto:confusion@food.net">confusion@food.net</a>
+                      <a href="mailto:confusion@food.net">neighborhoodbank@gmail.com</a>
 		           </address>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
